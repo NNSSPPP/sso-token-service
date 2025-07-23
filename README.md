@@ -3,13 +3,14 @@
 Sso Token Service is a personal SSO system project developed with Spring Boot and PostgreSQL and can insert SSO user data on Swagger UI and have respone(request body).
 
 ## Features
-This project can add data and update if have same day-month-year and HH:MM:ss. Next you click excute(save). Then swagger show respone {
-responseCode : 
+This project can add data and update if have same day-month-year and HH:MM:ss. Next you click excute(save). Then swagger show 
+this 
+respone { responseCode : 
 responseMessage
 responseData: {
 userid: "HelloWorld",
 tokenid: "HelloWorld"
-} responecode : I0700 you insert success,E000001 Error 400 you cannot post data, E000002 Error500 you cannot connect database.
+} 
 
 ## Tool
 * IntelliJ : running program 
@@ -73,17 +74,13 @@ tokenid               varchar(1000)
 * Second , you select post:app-controller/gentoken.
 * Then, you click try it out and insert data.
 * Next, you click excute and have output reponse body.
-* Finally, you have finnish if respone body  Example : 	
-  Response body 200 Ok
-  {
-  "responseCode": "I07000",
-  "responseMessage": "ทำรายการเรียบร้อย",
-  "responseData": {
-  "userid": "string",
-  "tokenid": "string"
-  }
-  } But If have error 400 you cannot post data or have error 500 you cannot find database. 
-
+  ```
+#responecode
+I0700 OK 200 you insert success.
+E000001 Error 400 you cannot post data.
+E000002 Error500 you cannot connect database.
+```
+* Finally, you have finnish.
 
 
 
