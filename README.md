@@ -1,17 +1,17 @@
 # Sso Token Service
 
-Sso Token Service is a personal SSO system project developed with Spring Boot and PostgreSQL and can insert SSO user data on Swagger UI and have respone(request body).
+Sso Token Service is a personal SSO system project developed with Spring Boot and PostgreSQL and can insert SSO user data on Swagger UI and have respone(respone body).
 
 ## Features
-This project can add data and update if have same day-month-year and HH:MM:ss. Next you click excute(save). Then swagger show 
-this respone : 
+This project can save data and update if have same day-month-year and HH:MM:ss. After you save swagger show 
+this respone body : There have responseCode, responseMessage , responseData. In responeData have userid and tokenid.
 
-{ responseCode : 
+Example output respone body:{ responseCode : 
 responseMessage
 responseData: {
 userid:  ,
 tokenid: 
-} 
+} }
 
 ## Tool
 * IntelliJ : running program 
@@ -66,23 +66,23 @@ tokenid               varchar(1000)
 );
  ```
 
-* Next Step you can clone my project and open on IntelliJ
-* Finally You can run and open link Swagger (http://localhost:8080/apitest/swagger-ui/.html)
+* Next Step you can clone my project and open on IntelliJ.
+* Finally You can run project and open link Swagger (http://localhost:8080/apitest/swagger-ui/.html).
 
 ## How to use Swagger
 
 * First, you open http://localhost:8080/apitest/swagger-ui/.html .
 * Second , you select post:app-controller/gentoken.
 * Then, you click try it out and insert data.
-* Next, you click excute and have output reponse body.
+* Next, you click excute and have output response body.
 
 ```
-#responecode
-I0700 OK 200 you insert success.
-E000001 Error 400 you cannot post data.
-E000002 Error500 you cannot connect database.
+#responecode on respone body
+I0700 OK 200 you insert success and show userid,tokenid.
+E000001 Error 400 you cannot post data and show data with not error.
+E000002 Error500 you cannot connect database and don't show userid,tokenid.
 ```
-* Finally, you have finnish.
+* Finally, you have finnish if responecode show I07000.
 
 
 
