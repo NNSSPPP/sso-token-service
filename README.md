@@ -1,17 +1,10 @@
 # Sso Token Service
 
-Sso Token Service is a personal SSO system project developed with Spring Boot and PostgreSQL and can insert SSO user data on Swagger UI and have respone(respone body).
+Sso Token Service is a personal SSO system project developed with Spring Boot and PostgreSQL and can insert SSO user data on Swagger UI and have response(response body).
 
 ## Features
 This project can save data and update if have same day-month-year and HH:MM:ss. After you save swagger show 
-this respone body : There have responseCode, responseMessage , responseData. In responeData have userid and tokenid.
-
-Example output respone body:{ responseCode : 
-responseMessage
-responseData: {
-userid:  ,
-tokenid: 
-} }
+this response body . There have responseCode, responseMessage , responseData. In responseData have userid and tokenid.
 
 ## Tool
 * IntelliJ : running program 
@@ -74,16 +67,49 @@ tokenid               varchar(1000)
 * First, you open http://localhost:8080/apitest/swagger-ui/.html .
 * Second , you select post:app-controller/gentoken.
 * Then, you click try it out and insert data.
-* Next, you click excute and have output response body.
+
+  Example Data
+```
+  {
+  "requestDate": "2025-07-23T02:23:52.078Z",
+  "ssotype": "string",
+  "systemid": "string",
+  "systemname": "string",
+  "systemtransactions": "string",
+  "systemprivileges": "string",
+  "systemusergroup": "string",
+  "systemlocationgroup": "string",
+  "userid": "string",
+  "userfullname": "string",
+  "userrdofficecode": "string",
+  "userofficecode": "string",
+  "clientlocation": "string",
+  "locationmachinenumber": "string",
+  "tokenid": "string"
+}
+```
+* Next, you click excute(save) and have output response body.
 
 ```
-#responecode on respone body
+#responecode on response body
 I0700 OK 200 you insert success and show userid,tokenid.
 E000001 Error 400 you cannot post data and show data with not error.
 E000002 Error500 you cannot connect database and don't show userid,tokenid.
 ```
-* Finally, you have finnish if responecode show I07000.
+* Finally, you have finnish if responsecode show I07000.
 
+  Example responsecode show I07000
+
+```  	
+{
+  "responseCode": "I07000",
+  "responseMessage": "ทำรายการเรียบร้อย",
+  "responseData": {
+    "userid": "string",
+    "tokenid": "string"
+  }
+}
+```
 
 
 
