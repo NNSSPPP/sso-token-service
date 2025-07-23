@@ -4,12 +4,13 @@ Sso Token Service is a personal SSO system project developed with Spring Boot an
 
 ## Features
 This project can add data and update if have same day-month-year and HH:MM:ss. Next you click excute(save). Then swagger show 
-this 
-respone { responseCode : 
+this respone : 
+
+{ responseCode : 
 responseMessage
 responseData: {
-userid: "HelloWorld",
-tokenid: "HelloWorld"
+userid:  ,
+tokenid: 
 } 
 
 ## Tool
@@ -37,7 +38,7 @@ mvn --version
 ## How to use with file
 
 * if you already Install with my List. 
-* First , you should set up database in PostgreSQL to create new role(about username password have at pom.xml) ,create new database(name:ssotest) and create table (name:sso_user_test)
+* First , you should set up database in PostgreSQL to create new role(about username password have at pom.xml) ,create new database(name : ssotest) and create table (name : sso_user_test)
  ```
  #create table sso_user_test
  
@@ -74,7 +75,8 @@ tokenid               varchar(1000)
 * Second , you select post:app-controller/gentoken.
 * Then, you click try it out and insert data.
 * Next, you click excute and have output reponse body.
-  ```
+
+```
 #responecode
 I0700 OK 200 you insert success.
 E000001 Error 400 you cannot post data.
