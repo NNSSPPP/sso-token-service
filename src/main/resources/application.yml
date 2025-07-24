@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ssotest
     username: ssodev
-    password: sso2022ok
+    password: ${DbPasswork:sso2022ok}
 
   jpa:
     hibernate:
